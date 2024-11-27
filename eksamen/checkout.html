@@ -40,6 +40,109 @@
     </div>
     </header>
     <main>
+        <h1> Kasse </h1>
+        
+        <!--SHOPPINGBAG-->
+        <section id="shoppingbag">
+            <h2>1. SHOPPINGBAGEN DIN</h2>
+            <div class="produktkort">
+                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 1">
+                <h3>PRODUCT NAME</h3>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+            </div>
+            <div class="produktkort">
+                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 2">
+                <h3>PRODUCT NAME</h3>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+            </div>
+            <div class="produktkort">
+                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 3">
+                <h3>PRODUCT NAME</h3>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+            </div>
+        </section>
+        <!--PERSONOPPLYSNINGER-->
+        <section id="personopplysninger">
+            <form>
+                <label for="fornavn">Fornavn:</label>
+                <input type="text" id="fornavn" name="fornavn" required>
+
+                <label for="etternavn">Etternavn:</label>
+                <input type="text" id="etternavn" name="etternavn" required>
+
+                <label for="adresse">Gateadresse:</label>
+                <input type="text" id="adresse" name="adresse" required>
+
+                <label for="postnummer">Postnummer:</label>
+                <input type="text" id="postnummer" name="postnummer" maxlength="4" minlength="4" required>
+
+                <label for="poststed">Poststed:</label>
+                <input type="text" id="poststed" name="poststed" maxlength="4" minlength="4" required>
+
+                <input type="submit" value="Lagre">
+                <input type="reset" value="Avbryt">
+            </form>
+        </section>
+
+        <!--LEVERING-->
+        <section id="Levering">
+            <h2>Levering</h2>
+            <form>
+                <label>
+                    <input type="radio" name="levering" value="ekspress-hjem" required>
+                    Ekspresslevering hjem
+                </label>
+
+                <label>
+                    <input type="radio" name="levering" value="ekspress-utlevering">
+                    Ekspress pakke til utleveringssted
+                </label>
+
+                <label>
+                    <input type="radio" name="levering" value="standard-hjem">
+                    Standard hjemlevering
+                </label>
+            </form>
+        </section>
+
+        <!--BETALING-->
+        <section id="betalig">
+            <h2>Betaling</h2>
+            <p>Totalbeløp: 998,-</p>
+            <form>
+                <label for="kortnummer">Kortnummer:</label>
+                <input type="text" id="kortnummer" name="kortnummer" maxlength="16" minlength="16" required>
+
+                <label for="utløpsdato">utløpsdato:</label>
+                <input type="month" id="utløpsdato" name="utløpsdato" required>
+
+                <label for="cvc">CVC/CVV:</label>
+                <input type="number" id="cvc" name="cvc" maxlength="3" minlength="3" required>
+
+                <input type="submit" value="Betal">
+            </form>
+
+            <!--SAMTYKKE-->
+            <div class="samtykke">
+                <label>
+                    <input type="checkbox" name="vilkår" required>
+                    Ja, jeg godtar vilkårene
+                </label>
+
+                <label>
+                    <input type="checkbox" name="nyhetsbrev">
+                    Ja takk! Send nyhetsbrev til meg
+                </label>
+                <p>
+                    Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
+                </p>
+            </div>
+        </section>
+
+
     </main>
     <footer>
         <section class="footer-logo">
