@@ -37,30 +37,143 @@
         </div>
     </header>
     <main>
-        <h1> Kasse </h1>
+        <section><h1>Kasse</h1></section>
         
         <!--SHOPPINGBAG-->
         <section id="shoppingbag">
             <h2>1. SHOPPINGBAGEN DIN</h2>
-            <div class="produktkort">
-                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 1">
-                <h3>PRODUCT NAME</h3>
-                <p>Kr 1999</p>
-                <p>Farge: beige</p>
-            </div>
-            <div class="produktkort">
-                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 2">
-                <h3>PRODUCT NAME</h3>
-                <p>Kr 1999</p>
-                <p>Farge: beige</p>
-            </div>
-            <div class="produktkort">
-                <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt= "Produkt 3">
-                <h3>PRODUCT NAME</h3>
-                <p>Kr 1999</p>
-                <p>Farge: beige</p>
-            </div>
+            
+            <!-- Produktkort 1 -->
+            <article class="produktkort">
+                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produkt 1">
+            </article>
+                <section class="produkt">
+                    <h3>PRODUCT NAME</h3>
+                    <p class="pris">Kr 1999</p>
+                    <p>Farge: beige</p>
+                </section>
+                <section class="knapper">
+                    <form class="størrelse">
+                        <label for="størrelse1">Størrelse:</label>
+                        <select id="størrelse1" name="størrelse">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </form>
+                    <form class="antall">
+                        <label for="antall1">Antall:</label>
+                        <input type="number" id="antall1" name="antall" value="1" min="1">
+                    </form>
+                </section>
+                <aside>
+                    <button aria-label="Lagre til favoritter">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button aria-label="Fjern produkt">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </aside>
+            </article>
+
+            
+            <!-- Produktkort 1 -->
+            <article class="produktkort">
+                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produkt 1">
+            </article>
+                <section class="produkt">
+                    <h3>PRODUCT NAME</h3>
+                    <p class="pris">Kr 1999</p>
+                    <p>Farge: beige</p>
+                </section>
+                <section class="knapper">
+                    <form class="størrelse">
+                        <label for="størrelse1">Størrelse:</label>
+                        <select id="størrelse1" name="størrelse">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </form>
+                    <form class="antall">
+                        <label for="antall1">Antall:</label>
+                        <input type="number" id="antall1" name="antall" value="1" min="1">
+                    </form>
+                </section>
+                <aside>
+                    <button aria-label="Lagre til favoritter">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button aria-label="Fjern produkt">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </aside>
+            </article>
+        
+    
+            <article class="produktkort">
+                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produkt 3">
+            </article>
+                <section class="produkt">
+                    <h3>PRODUCT NAME</h3>
+                    <p class="pris">Kr 1999</p>
+                    <p>Farge: beige</p>
+                </section>
+                <section>
+                    <form>
+                        <label for="størrelse1">Størrelse:</label>
+                        <select id="størrelse1" name="størrelse">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <label for="antall1">Antall:</label>
+                        <input type="number" id="antall1" name="antall" value="1" min="1">
+                    </form>
+                </section>
+                <aside>
+                    <button aria-label="Lagre til favoritter">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button aria-label="Fjern produkt">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </aside>
+            </article>
+
+            
+            <article class="produktkort">
+                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produkt 4">
+            </article>
+                <section class="produkt">
+                    <h3>PRODUCT NAME</h3>
+                    <p class="pris">Kr 1999</p>
+                    <p>Farge: beige</p>
+                </section>
+                <section>
+                    <form>
+                        <label for="størrelse2">Størrelse:</label>
+                        <select id="størrelse2" name="størrelse">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <label for="antall2">Antall:</label>
+                        <input type="number" id="antall2" name="antall" value="1" min="1">
+                    </form>
+                </section>
+                <aside>
+                    <button aria-label="Lagre til favoritter">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button aria-label="Fjern produkt">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </aside>
+            </article>
         </section>
+
+
         <!--PERSONOPPLYSNINGER-->
         <section id="personopplysninger">
             <form>
@@ -83,6 +196,7 @@
                 <input type="reset" value="Avbryt">
             </form>
         </section>
+       
 
         <!--LEVERING-->
         <section id="Levering">
@@ -103,6 +217,7 @@
                     Standard hjemlevering
                 </label>
             </form>
+
         </section>
 
         <!--BETALING-->
