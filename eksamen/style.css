@@ -5,6 +5,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+   
 }
 
 a {
@@ -53,5 +55,358 @@ header {
 }
 
 
+.meny ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom:22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 
-positin: relative
+.meny ul li a {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+
+.logo{
+    font-size: 30px !important;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+} 
+.header-icons{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.header-icons a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+footer .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    justify-content: space-between;
+    text-align: left;
+}
+
+footer .footer-kontakt, footer .footer-snarveier{
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+}
+
+footer .footer-kontakt h3, footer .footer-snarveier h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+footer .footer-kontakt address, footer .footer-snarveier ul{
+    font-size: 14px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer .footer-snarveier ul{
+    list-style: none;
+    padding: 0;
+    line-height: 1.7;
+   
+    
+}
+
+footer .footer-snarveier ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+footer .footer-snarveier ul li a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+footer .footer-sosiale-medier{
+    margin-left: 24px;
+    margin-top: 24px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer-sosiale-medier h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.footer-sosiale-medier a{
+    margin-right: 16px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-sosiale-medier a:hover{
+    color: #000;
+}
+
+
+footer .footer-logo{
+    padding: 15px;
+    margin-bottom: 16px;
+}
+
+.footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding-top: 15px;
+   
+}
+
+.footer-logo hr{
+    border-top: 1px solid #7c7575;
+    width: 100%;
+}
+.footer-logo p{
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+
+
+
+
+.kategori-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.kategori-buttons .button{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #000;
+    line-height: 1.2;
+    width: 70px;
+
+}
+
+
+
+#populære-produkter{
+    text-align: center;
+    padding: 16px;
+}
+
+#populære-produkter h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#populære-produkter p{
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+
+
+.produkter article {
+    display: inline-block; 
+    text-align: center; 
+    margin: 10px; 
+    
+    
+}
+
+
+
+.produkter article .reviews{
+    text-align: left;
+    margin-top: 5px;
+}
+   
+
+
+.produkter img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.produkter article p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.produkter article h3,
+.produkter article p:first-of-type{
+    display: inline-block;
+    margin: 0;
+}
+
+.produkter article .product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.produkter article .reviews{
+    margin-top: 5px;
+}
+
+
+#populære-kategorier{
+    text-align: center;
+    padding: 20px;
+    
+}
+
+#populære-kategorier .kategorier{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+
+#anmeldelser{
+    padding: 16px;
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.anmeldelse-kort-container{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+
+}
+
+.anmeldelse-kort{
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    scroll-snap-align: start;
+    gap: 16px;
+    border: 1px solid rgb(54, 51, 51);
+    padding: 16px;
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 40px;
+
+}
+
+
+.anmeldelse-kort img{
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.anmeldelse-kort h3{
+    font-size: 20px;
+    
+}
+
+.anmeldelse-kort p{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+} 
+
+
+
+
+
+.anmeldelse-kort-container{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+}
+
+
+article {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+
+
+/* BANNER */
+.banner {
+    background-color: #e0e0e0;
+    padding: 16px;
+    text-align: right;
+    height: 400px;
+    justify-content: space-around;
+    border-radius: 25px;
+    padding: 20px;
+    width: 425px;
+    height: 400px;
+    margin-left: auto;;
+   
+}
+
+.banner a {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 8px;
+    /* https://www.w3schools.com/css/css3_borders.asp */
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+
+} 
+ 
+
+
+.
