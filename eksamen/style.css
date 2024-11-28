@@ -409,4 +409,41 @@ article {
  
 
 
-.
+.breadcrumb ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.breadcrumb ul li{
+    font-size: 14px;
+    color: #000000;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb ul li i{
+    color: #000000;
+    margin-left: 8px;
+    margin-right: 8px;
+    line-height: normal;
+    vertical-align: middle;
+    
+
+}
+
+
+
+
+/* Lignende produkter */
+.lignende-produkter .produkter{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
