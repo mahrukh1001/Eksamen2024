@@ -36,89 +36,74 @@
 
   
     <main>
-        
-        <section id="shoppingbag">
+        <section class="shoppingbag-section">
+            <h2>Kasse</h2>
             <h2>1. Shoppingbaggen din</h2>
-            <!-- Produktkort 1 -->
             <article class="produktkort">
                 <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produktbilde">
-                <div class="produkt-info">
-                    <h3>Product Name</h3>
-                    <p class="pris">Kr 1999</p>
+                <section class="produkt-info">
+                    <h4>Produktnavn</h4>
+                    <p>Kr 1999</p>
                     <p>Farge: beige</p>
-                    <form class="størrelse">
-                        <label for="størrelse1">Størrelse:</label>
-                        <select id="størrelse1" name="størrelse1">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
-                    </form>
-                    <form class="antall">
-                        <label for="antall1">Antall:</label>
-                        <input type="number" id="antall1" name="antall" value="1" min="1">
-                    </form>
-                </div>
-                <aside class="actions">
-                    <button aria-label="Lagre til favoritter"><i class="fa-regular fa-heart"></i></button>
-                    <button aria-label="Fjern produkt"><i class="fa-solid fa-trash"></i></button>
-                </aside>
-            </article>
-        
-            <!-- Produktkort 2 -->
-            <article class="produktkort">
-                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produktbilde">
-                <div class="produkt-info">
-                    <h3>Product Name</h3>
-                    <p class="pris">Kr 1999</p>
-                    <p>Farge: beige</p>
-                    <form class="størrelse">
-                        <label for="størrelse2">Størrelse:</label>
-                        <select id="størrelse2" name="størrelse2">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
-                    </form>
-                    <form class="antall">
-                        <label for="antall2">Antall:</label>
-                        <input type="number" id="antall2" name="antall" value="1" min="1">
-                    </form>
-                </div>
-                <aside class="actions">
-                    <button aria-label="Lagre til favoritter"><i class="fa-regular fa-heart"></i></button>
-                    <button aria-label="Fjern produkt"><i class="fa-solid fa-trash"></i></button>
+                    <label for="størrelse">Størrelse:</label>
+                    <select id="størrelse" name="størrelse">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="antall">Antall:</label>
+                    <input type="number" id="antall" name="antall" value="1" min="1">
+                </section>
+                <aside class="produkt-ikoner">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </aside>
             </article>
             <article class="produktkort">
                 <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produktbilde">
-                <div class="produkt-info">
-                    <h3>Product Name</h3>
-                    <p class="pris">Kr 1999</p>
+                <section class="produkt-info">
+                    <h4>Produktnavn</h4>
+                    <p>Kr 1999</p>
                     <p>Farge: beige</p>
-                    <form class="størrelse">
-                        <label for="størrelse3">Størrelse:</label>
-                        <select id="størrelse3" name="størrelse3">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
-                    </form>
-                    <form class="antall">
-                        <label for="antall2">Antall:</label>
-                        <input type="number" id="antall3" name="antall" value="1" min="1">
-                    </form>
-                </div>
-                <aside class="actions">
-                    <button aria-label="Lagre til favoritter"><i class="fa-regular fa-heart"></i></button>
-                    <button aria-label="Fjern produkt"><i class="fa-solid fa-trash"></i></button>
+                    <label for="størrelse">Størrelse:</label>
+                    <select id="størrelse" name="størrelse">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="antall">Antall:</label>
+                    <input type="number" id="antall" name="antall" value="1" min="1">
+                </section>
+                <aside class="produkt-ikoner">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
                 </aside>
             </article>
+            <article class="produktkort">
+                <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Produktbilde">
+                <section class="produkt-info">
+                    <h4>Produktnavn</h4>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <label for="størrelse">Størrelse:</label>
+                    <select id="størrelse" name="størrelse">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="antall">Antall:</label>
+                    <input type="number" id="antall" name="antall" value="1" min="1">
+                </section>
+                <aside class="produkt-ikoner">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </aside>
+            </article>
+            
         </section>
-        
 
   
         <section class="personopplysninger">
@@ -198,24 +183,41 @@
         </section>
         
         
-
-        
         <section id="betaling">
             <h2>4. Betaling</h2>
-            <p>Totalbeløp: Kr 1999</p>
             <form>
-                <label for="kortnummer">Kortnummer:</label>
-                <input type="text" id="kortnummer" name="kortnummer" maxlength="16" required>
-
-                <label for="utløpsdato">Utløpsdato:</label>
-                <input type="month" id="utløpsdato" name="utløpsdato">
-
-                <label for="cvc">CVC/CVV:</label>
-                <input type="number" id="cvc" name="cvc">
-
-                <input type="submit" value="Betal">
+                <h5>Betal med kort <i class="fa-solid fa-credit-card"></i></h5>
+                <label for="kortnummer">Kortnummer</label>
+                <input type="text" id="kortnummer" name="kortnummer" maxlength="16" placeholder="3423••••••••4435" required>
+        
+                <label for="utløpsdato">Utløpsdato</label>
+                <input type="date" id="utløpsdato" name="utløpsdato" placeholder="mm / dd / yyyy">
+        
+                <label for="cvc">CVC/CVV</label>
+                <input type="number" id="cvc" name="cvc" placeholder="CVC/CVV" required>
+        
+                <div class="total-belop">
+                    <p>Å betale inkl. mva.</p>
+                    <h3>1,199 kr</h3>
+                </div>
+        
+                <button type="submit" class="submit-btn">Fullfør kjøp</button>
+        
+                <p class="info-text">
+                    Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
+                </p>
+        
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" name="newsletter"> Ja takk! Send nyhetsbrev til meg.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sms"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+                    </label>
+                </div>
             </form>
         </section>
+        
     </main>
 
     <!-- Footer -->
