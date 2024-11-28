@@ -20,7 +20,9 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="index.html#populære-produkter">Produkter</a></li>
-                <li class="logo"><a href="index.html">LOGO</a></li>
+                <li class="logo">
+                    <a href="index.html"><h1 class="logo">LOGO</h1></a>
+                </li>
                 <li><a href="index.html#populære-kategorier">Kategorier</a></li>
                 <li><a href="index.html#footer-kontakt">Kontakt oss</a></li>
             </ul>
@@ -119,28 +121,37 @@
         
 
   
-        <section id="personopplysninger">
+        <section class="personopplysninger">
             <h2>2. Dine opplysninger</h2>
             <form>
                 <h5>Leveringsadresse</h5>
                 <label for="fornavn">Fornavn:</label>
-                <input type="text" id="fornavn" name="fornavn" required>
+                <input type="text" id="fornavn" name="fornavn" placeholder="Nora*" required>
 
                 <label for="etternavn">Etternavn:</label>
-                <input type="text" id="etternavn" name="etternavn" required>
+                <input type="text" id="etternavn" name="etternavn" placeholder="Nordman*" required>
 
                 <label for="adresse">Gateadresse:</label>
-                <input type="text" id="adresse" name="adresse" required>
+                <input type="text" id="adresse" name="adresse" placeholder="BRA veien 4*">
 
                 <label for="postnummer">Postnummer:</label>
-                <input type="text" id="postnummer" name="postnummer" maxlength="4" minlength="4" required>
+                <input type="text" id="postnummer" name="postnummer" placeholder="1752*" maxlength="4" minlength="4" required>
 
                 <label for="poststed">Poststed:</label>
-                <input type="text" id="poststed" name="poststed" required>
+                <input type="text" id="poststed" name="poststed" placeholder="Halden*" required>
 
                 <input type="submit" value="Lagre">
                 <input type="reset" value="Avbryt">
             </form>
+        </section>
+
+        <section class="kontaktinfomarsjon">
+            <form>
+                <h5>Kontaktinformasjon</h5>
+            </form>
+            <label for="epost">E-post</label>
+            <input type="text" id="epost" name="epost" placeholder="Noranordman@hiof.no..*">
+
         </section>
 
         
