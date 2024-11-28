@@ -46,7 +46,7 @@
                     <p>Farge: beige</p>
                     <form class="størrelse">
                         <label for="størrelse1">Størrelse:</label>
-                        <select id="størrelse1" name="størrelse">
+                        <select id="størrelse1" name="størrelse1">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -73,10 +73,11 @@
                     <p>Farge: beige</p>
                     <form class="størrelse">
                         <label for="størrelse2">Størrelse:</label>
-                        <select id="størrelse2" name="størrelse">
+                        <select id="størrelse2" name="størrelse2">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
+                            <option value="XL">XL</option>
                         </select>
                     </form>
                     <form class="antall">
@@ -96,16 +97,17 @@
                     <p class="pris">Kr 1999</p>
                     <p>Farge: beige</p>
                     <form class="størrelse">
-                        <label for="størrelse2">Størrelse:</label>
-                        <select id="størrelse2" name="størrelse">
+                        <label for="størrelse3">Størrelse:</label>
+                        <select id="størrelse3" name="størrelse3">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
+                            <option value="XL">XL</option>
                         </select>
                     </form>
                     <form class="antall">
                         <label for="antall2">Antall:</label>
-                        <input type="number" id="antall2" name="antall" value="1" min="1">
+                        <input type="number" id="antall3" name="antall" value="1" min="1">
                     </form>
                 </div>
                 <aside class="actions">
@@ -160,10 +162,10 @@
                 <input type="text" id="kortnummer" name="kortnummer" maxlength="16" required>
 
                 <label for="utløpsdato">Utløpsdato:</label>
-                <input type="month" id="utløpsdato" name="utløpsdato" maxlength="4" required>
+                <input type="month" id="utløpsdato" name="utløpsdato">
 
                 <label for="cvc">CVC/CVV:</label>
-                <input type="number" id="cvc" name="cvc" maxlength="3" required>
+                <input type="number" id="cvc" name="cvc">
 
                 <input type="submit" value="Betal">
             </form>
