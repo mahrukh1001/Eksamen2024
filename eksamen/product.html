@@ -20,11 +20,7 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#populære-produkter">Produkter</a></li>
-
-                <li class="logo">
-                    <a href="index.html"><h1 class="logo">LOGO</h1></a>
-                </li>
-
+                <li class="logo-item"><h1 class="logo">LOGO</h1></li>
                 <li><a href="#populære-kategorier">Kategorier</a></li>
                 <li><a href="#footer-kontakt">Kontakt oss</a></li>
             </ul>
@@ -38,7 +34,7 @@
     <main>
         <nav class="breadcrumb">
             <ul>
-                <li><a href="index.html">Hjem</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="index.html">Hjem</a><i class="fa-solid fa-angle-right" aria-label="pil-mot-høyre"></i></li>
                 <li><a href="kategori.html">Kategori</a><i class="fa-solid fa-angle-right"></i></li>
                 <li><strong>Produktnavn</strong></li>
             </ul>
@@ -48,65 +44,141 @@
             <section class="produkt-bilder">
                 <!--ETT STORT PRODUKTBILDE-->
                 <div class="stort-bilde">
-                <img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Stort produktbilde">
+                <img src="https://fastly.picsum.photos/id/120/4928/3264.jpg?hmac=i-8mkfKj_gRyQt9ZJVhbIBXbtIBNcsbI_gwNe_39vus" alt="Stort produktbilde">
                 </div>
                 <!--TRE SMÅ PRODUKTBILDER-->
                 <div class="små-bilder">
-                    <img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Lite bilde 1">
-                    <img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Lite bilde 2">
-                    <img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Lite bilde 3">
+                    <img src="https://fastly.picsum.photos/id/120/4928/3264.jpg?hmac=i-8mkfKj_gRyQt9ZJVhbIBXbtIBNcsbI_gwNe_39vus" alt="Lite bilde 1">
+                    <img src="https://fastly.picsum.photos/id/120/4928/3264.jpg?hmac=i-8mkfKj_gRyQt9ZJVhbIBXbtIBNcsbI_gwNe_39vus" alt="Lite bilde 2">
+                    <img src="https://fastly.picsum.photos/id/120/4928/3264.jpg?hmac=i-8mkfKj_gRyQt9ZJVhbIBXbtIBNcsbI_gwNe_39vus" alt="Lite bilde 3">
                 </div>
             </section>
             <section class="produkt-info">
-                <h1>Produktnavn</h1>
                 <div class="produkt-detaljer">
+                    <h1>Produktnavn</h1>
                     <a href="MERKENAVN">MERKENAVN</a>
-                    <p>Produktbeskrivelse</p>
                     <p>5 195kr inkl. mva.</p>
                     <p>Farge:<strong>beige</strong></p>
                 </div>
             </section>
+            <aside class="produkt-tillegg">
+                <select class="velg-størrelse">
+                    <option value="">Velg størrelse</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">XLarge</option>
+                </select>
+                <section class="handlekurv-seksjon">
+                    <button class="legg-i-handlekurv">Legg i handlekurv</button>
+                    <button class="hjerte"><i class="fa-regular fa-heart"></i></button>
+                </section>
+                    
+                
+            </aside>
 
         </div>
         <!-- Lignende produkter -->
         <aside class="lignende-produkter">
             <h2>Lignende produkter</h2>
-            <a href="index.html">Se flere lignende produkter <i class="fa-solid fa-angle-right"></i></a>
+            <a href="index.html">Se flere lignende produkter <i class="fa-solid fa-angle-right" aria-label="til høyre"></i></a>
             <div class="produkter">
-                <article class="produktkort1">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 1">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
 
-                <article class="produktkort2">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 2">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+
+
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
 
-                <article class="produktkort3">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 3">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
 
-                <article class="produktkort4">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 4">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
 
-                <article class="produktkort5">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 5">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
 
-                <article class="produktkort5">
-                    <img src="https://fastly.picsum.photos/id/111/4400/2656.jpg?hmac=leq8lj40D6cqFq5M_NLXkMYtV-30TtOOnzklhjPaAAQ" alt="Lignende 6">
-                    <h3>Product name</h3>
-                    <p>Pris: 1999,-</p>
+                <article class="produktkort">
+                    <img src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU" alt="Lignende produkt 1">
+                    <section class="produkt-info">
+                        <h3>Product name</h3>
+                        <span class="produkt-pris">Kr 1999</span>
+                    </section>
+                    <section class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        842 Reviews
+                    </section>
                 </article>
             </div>
     
@@ -114,38 +186,39 @@
    
     </main>
     <footer>
+        <hr>
         <section class="footer-logo">
                 <a href="#">LOGO</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et erat egestas, aliquet enim sit amet, eleifend nulla.</p>
         </section>
 
         <section class="footer-main">
-            <section class="footer-kontakt">
-                <h3>Kontakt</h3>
+            <section id="footer-kontakt" class="footer-kontakt">
+                <h3>KONTAKT</h3>
                 <address>
-                    <p><i class="fa-solid fa-location-dot"></i><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</p>
-                    <p><i class="fa-solid fa-phone"></i><strong>Telefon:</strong> 69 60 80 00</p>
-                    <p><i class="fa-solid fa-envelope"></i><strong>E-post:</strong> halden@hiof.no</p>
-                    <p><i class="fa-solid fa-clock"></i><strong>Åpningstider:</strong> Stenger 15:00</p>
+                    <p><i class="fa-solid fa-location-dot" aria-label="lokasjon ikon"></i><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</p>
+                    <p><i class="fa-solid fa-phone" aria-label="telefon ikon"></i><strong>Telefon:</strong> 69 60 80 00</p>
+                    <p><i class="fa-solid fa-envelope" aria-label="e-post ikon"></i><strong>E-post:</strong> halden@hiof.no</p>
+                    <p><i class="fa-solid fa-clock" aria-label="åpningstider ikon"></i><strong>Åpningstider:</strong> Stenger 15:00</p>
                 </address>
             </section>
 
-        <section class="footer-snarveier">
-        <h3>Snarveier</h3>
+            <section class="footer-snarveier">
+                <h3>SNARVEIER</h3>
                 <ul>
                     <li><a href="#">Produkter</a></li>
                     <li><a href="#">Kategorier</a></li>
                     <li><a href="#">Kontakt oss</a></li>
                 </ul>
             </section>
-        </section>
-
-        <section class="footer-sosiale-medier">
-            <h3>SOSIALE MEDIER</h3>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            
+            <section class="footer-sosiale-medier">
+                <h3>SOSIALE MEDIER</h3>
+                <a href="#"><i class="fa-brands fa-instagram" aria-label="instagram ikon"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook" aria-label="facebook ikon"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin" aria-label="linkedin ikon"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest" aria-label="pinterest ikon"></i></a>
+            </section>
         </section>
     </footer>
 </body>
