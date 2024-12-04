@@ -10,28 +10,26 @@
 </head>
 <body>
     <header class="header">
-            <form class="search-form">
-                <input type="search" placeholder="søk her" id="search">
-                <button type="submit" class="search-button">
-                    <i class="fa-solid fa-magnifying-glass" aria-label="søkeikon"></i>
-                </button>
-            </form>
-            <nav class="meny">
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="#populære-produkter">Produkter</a></li>
-                    <li class="logo-item"><h1 class="logo">LOGO</h1></li>
-                    <li><a href="#populære-kategorier">Kategorier</a></li>
-                    <li><a href="#footer-kontakt">Kontakt oss</a></li>
-                </ul>
-            </nav>
-        
-            
-            <div class="header-icons">
-                <a href="#"><i class="fa-regular fa-user" aria-label="bruker ikon for brukerprofilen"></i></a>
-                <a href="#"><i class="fa-regular fa-heart" aria-label="favoritter ikon for det du har likt "></i></a>
-                <a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="handlekurv for det du har kjøpt"></i></a> 
-            </div>
+        <form class="search-form">
+            <input type="search" placeholder="søk her" id="search">
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass" aria-label="Søk ikon"></i>
+            </button>
+        </form>
+        <nav class="meny">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#populære-produkter">Produkter</a></li>
+                <li class="logo-item"><h1 class="logo">LOGO</h1></li>
+                <li><a href="#populære-kategorier">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </nav>
+        <section class="header-icons">
+            <a href="#"><i class="fa-regular fa-user" aria-label="bruker ikon for brukerprofilen"></i></a>
+            <a href="#"><i class="fa-regular fa-heart" aria-label="favoritter ikon for det du har likt"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="handlekurv for det du har kjøpt"></i></a>
+        </section>
     </header>
     <main>
        <section class="banner">
@@ -45,19 +43,19 @@
         <!--POPULÆRE PRODUKTER-->
         <section id="populære-produkter">
             <h2>Våre mest populære produkter</h2>
-            <p>Oppdag det beste av det beste</p>
+            <span class="tekst">Oppdag det beste av det beste</span>
             <aside class="kategori-buttons"> 
                 <a href="#" class="button">New Product</a>
                 <a href="#" class="button">Special Price</a>
                 <a href="#" class="button">Best sellers</a>
             </aside>
 
-            <div class="produkter">
+            <div class="populære-produktkort-container">
                 <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
                         <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
+                        <span class="pris">Pris: 1999,-</span>
                     </section>
                     <p class="reviews">
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -70,27 +68,10 @@
                 </article>
 
                 <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
                         <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
-                    </section>
-                    <p class="reviews">
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
-                        <span>842 Reviews</span>
-                    </p>
-                </article>
-
-
-                <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
-                        <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
+                        <span class="pris">Pris: 1999,-</span>
                     </section>
                     <p class="reviews">
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -104,10 +85,10 @@
 
 
                 <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
                         <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
+                        <span class="pris">Pris: 1999,-</span>
                     </section>
                     <p class="reviews">
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -121,10 +102,27 @@
 
 
                 <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
                         <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
+                        <span class="pris">Pris: 1999,-</span>
+                    </section>
+                    <p class="reviews">
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        <span>842 Reviews</span>
+                    </p>
+                </article>
+
+
+                <article class="produktkort">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
+                        <a href="product.html"><h3>Product name</h3></a>
+                        <span class="pris">Pris: 1999,-</span>
                     </section>
                     <p class="reviews">
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -139,10 +137,10 @@
 
 
                 <article class="produktkort">
-                    <a href="product.html"><img src="https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4" alt="Produkt 1"></a>
-                    <section class="product-info">
+                    <a href="product.html"><img src="img/fashion-1283863_1280.jpg" alt="Produkt 1"></a>
+                    <section class="produkt-info">
                         <a href="product.html"><h3>Product name</h3></a>
-                        <span class="produkt-pris">Pris: 1999,-</span>
+                        <span class="pris">Pris: 1999,-</span>
                     </section>
                     <p class="reviews">
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -188,7 +186,7 @@
             <h2>Anmeldelser</h2>
             <div class="anmeldelse-kort-container">
                 <article class="anmeldelse-kort">
-                    <img src="https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg" alt="Kunde 1 bilde">
+                    <img src="img/woman-2604283_1280.jpg" alt="Kunde 1 bilde">
                     <h3>Rober Labrador</h3>
                     <p>
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -201,21 +199,7 @@
                 </article>
 
                 <article class="anmeldelse-kort">
-                    <img src="https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg" alt="Kunde 1 bilde">
-                    <h3>Rober Labrador</h3>
-                    <p>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
-                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
-                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
-                    </p>
-                    <p class="anmeldelse-tekst">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus ex ut nulla ornare, id lacinia mauris rutrum. Duis varius consequat placerat. Mauris pharetra non nulla nec aliquet. Vestibulum hendrerit erat sit amet imperdiet posuere. Nunc lacus lorem, commodo sit amet tincidunt sed, accumsan vitae dolor. Phasellus et erat egestas, aliquet enim sit amet, eleifend nulla. </p>
-                </article>
-
-
-                <article class="anmeldelse-kort">
-                    <img src="https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg" alt="Kunde 1 bilde for anmeldelse">
+                    <img src="img/woman-2604283_1280.jpg" alt="Kunde 2 bilde">
                     <h3>Rober Labrador</h3>
                     <p>
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -229,7 +213,21 @@
 
 
                 <article class="anmeldelse-kort">
-                    <img src="https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg" alt="Kunde 2 bilde for anmeldelse">
+                    <img src="img/woman-2604283_1280.jpg" alt="Kunde 3 bilde">
+                    <h3>Rober Labrador</h3>
+                    <p>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                        <i class="fa-regular fa-star" aria-label="hvit stjerne"></i>
+                    </p>
+                    <p class="anmeldelse-tekst">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus ex ut nulla ornare, id lacinia mauris rutrum. Duis varius consequat placerat. Mauris pharetra non nulla nec aliquet. Vestibulum hendrerit erat sit amet imperdiet posuere. Nunc lacus lorem, commodo sit amet tincidunt sed, accumsan vitae dolor. Phasellus et erat egestas, aliquet enim sit amet, eleifend nulla. </p>
+                </article>
+
+
+                <article class="anmeldelse-kort">
+                    <img src="img/woman-2604283_1280.jpg" alt="Kunde 3 bilde for anmeldelse">
                     <h3>Rober Labrador</h3>
                     <p>
                         <i class="fa-solid fa-star" aria-label="svart stjerne"></i>
@@ -244,7 +242,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <hr>
         <section class="footer-logo">
                 <a href="#">LOGO</a>
@@ -265,9 +263,10 @@
             <section class="footer-snarveier">
                 <h3>SNARVEIER</h3>
                 <ul>
-                    <li><a href="#">Produkter</a></li>
-                    <li><a href="#">Kategorier</a></li>
+                    <li><a href="#populære-produkter">Produkter</a></li>
+                    <li><a href="#populære-kategorier">Kategorier</a></li>
                     <li><a href="#">Kontakt oss</a></li>
+                    <li><a href="tilgjengelighetserklæring/Tilgjenglighetserklæring.pdf">Tilgjenglighetserklæring</a></li>
                 </ul>
             </section>
             

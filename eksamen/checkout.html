@@ -11,7 +11,7 @@
    
     <header class="header">
         <form class="search-form">
-            <input type="search" placeholder="Søk her" id="search">
+            <input type="search" placeholder="søk her" id="search">
             <button type="submit" class="search-button">
                 <i class="fa-solid fa-magnifying-glass" aria-label="Søk ikon"></i>
             </button>
@@ -22,14 +22,14 @@
                 <li><a href="#populære-produkter">Produkter</a></li>
                 <li class="logo-item"><h1 class="logo">LOGO</h1></li>
                 <li><a href="#populære-kategorier">Kategorier</a></li>
-                <li><a href="#footer-main">Kontakt oss</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
             </ul>
         </nav>
-        <div class="header-icons">
+        <section class="header-icons">
             <a href="#"><i class="fa-regular fa-user" aria-label="bruker ikon for brukerprofilen"></i></a>
             <a href="#"><i class="fa-regular fa-heart" aria-label="favoritter ikon for det du har likt"></i></a>
             <a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="handlekurv for det du har kjøpt"></i></a>
-        </div>
+        </section>
     </header>
 
   
@@ -38,73 +38,97 @@
             <p class="back-link"><a href="index.html"><i class="fa-solid fa-arrow-left" aria-label="pil mot venstre ikon"></i> Fortsett å handle</a></p>
             <h2 class="kasse-title">Kasse</h2>
             <section class="shoppingbag-container">
-                <h3>1. Shoppingbagen din</h3>
-                <div class="produktkort-container">
+                <h3>1. SHOPPINGBAGEN DIN</h3>
+                <div class="produkt-wrapper">
                     <!-- Produktkort 1 -->
-                    <article class="produktkort">
-                        <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Bildet av et produkt">
-                        <section class="produkt-info">
-                            <h4>Produktnavn</h4>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                            <label for="størrelse1">Størrelse:</label>
-                            <select id="størrelse1" name="størrelse">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                            </select>
-                            <label for="antall1">Antall:</label>
-                            <input type="number" id="antall1" name="antall" value="1" min="1">
+                    <article class="produkt-element">
+                        <img src="img/cat-5394567_1280.jpg" alt="Bildet av en katt">
+                        <section class="kasse-info">
+                            <section class="more-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>Kr 1999</p>
+                                <p>Farge: beige</p>
+                            </section>
+                            <div class="inputs-container">
+                                <section class="størrelse-container">
+                                    <label for="størrelse1">Størrelse</label>
+                                    <select id="størrelse1" name="størrelse">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </section>
+                                <section class="antall-container">
+                                    <label for="antall1">Antall</label>
+                                    <input type="number" id="antall1" name="antall" value="1" min="1">
+                                </section>
+                            </div>
                         </section>
-                        <aside class="produkt-ikoner">
-                            <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
-                            <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
-                        </aside>
+                    <aside class="produkt-ikoner">
+                        <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
+                        <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
+                    </aside>
                     </article>
                     <!-- Produktkort 2 -->
-                    <article class="produktkort">
-                        <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Bilde av et produkt">
-                        <section class="produkt-info">
-                            <h4>Produktnavn</h4>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                            <label for="størrelse2">Størrelse:</label>
-                            <select id="størrelse2" name="størrelse">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                            </select>
-                            <label for="antall2">Antall:</label>
-                            <input type="number" id="antall2" name="antall" value="1" min="1">
+                    <article class="produkt-element">
+                        <img src="img/cat-5394567_1280.jpg" alt="Bildet av en katt">
+                        <section class="kasse-info">
+                            <section class="more-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>Kr 1999</p>
+                                <p>Farge: beige</p>
+                            </section>
+                            <div class="inputs-container">
+                                <section class="størrelse-container">
+                                    <label for="størrelse1">Størrelse</label>
+                                    <select id="størrelse1" name="størrelse">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </section>
+                                <section class="antall-container">
+                                    <label for="antall1">Antall</label>
+                                    <input type="number" id="antall1" name="antall" value="1" min="1">
+                                </section>
+                            </div>
                         </section>
-                        <aside class="produkt-ikoner">
-                            <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
-                            <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
-                        </aside>
+                    <aside class="produkt-ikoner">
+                        <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
+                        <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
+                    </aside>
                     </article>
                     <!-- Produktkort 3 -->
-                    <article class="produktkort">
-                        <img src="https://fastly.picsum.photos/id/314/4608/3072.jpg?hmac=HcvRsAYG4_nPkRRidvT_8kc5h3tiZph7H_m-8ANeqg8" alt="Bilde av et produkt">
-                        <section class="produkt-info">
-                            <h4>Produktnavn</h4>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                            <label for="størrelse3">Størrelse:</label>
-                            <select id="størrelse3" name="størrelse">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                            </select>
-                            <label for="antall3">Antall:</label>
-                            <input type="number" id="antall3" name="antall" value="1" min="1">
+                    <article class="produkt-element">
+                        <img src="img/cat-5394567_1280.jpg" alt="Bildet av en katt">
+                        <section class="kasse-info">
+                            <section class="more-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>Kr 1999</p>
+                                <p>Farge: beige</p>
+                            </section>
+                            <div class="inputs-container">
+                                <section class="størrelse-container">
+                                    <label for="størrelse1">Størrelse</label>
+                                    <select id="størrelse1" name="størrelse">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </section>
+                                <section class="antall-container">
+                                    <label for="antall1">Antall</label>
+                                    <input type="number" id="antall1" name="antall" value="1" min="1">
+                                </section>
+                            </div>
                         </section>
-                        <aside class="produkt-ikoner">
-                            <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
-                            <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
-                        </aside>
+                    <aside class="produkt-ikoner">
+                        <i class="fa-regular fa-heart" aria-label="Favoritt ikon"></i>
+                        <i class="fa-solid fa-trash" aria-label="Slett ikon"></i>
+                    </aside>
                     </article>
                 </div>
             </section>
@@ -149,7 +173,7 @@
             <h2>3. Levering</h2>
             <h5>Leveringsvalg</h5>
             <form>
-                <label for="ekspress hjemlevering">
+                <label for="ekspress hjemlevering" class="delivery-option">
                     <input type="radio" name="levering" value="ekspress-hjem" required>
                     <span class="option-header">
                         <strong>Ekspress Hjemlevering</strong>
@@ -162,7 +186,7 @@
                         Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg for frokost mandag til lørdag.
                     </p>
                 </label>
-                <label for="ekspress utleveringssted">
+                <label for="ekspress utleveringssted" class="delivery-option">
                     <input type="radio" name="levering" value="ekspress-utlevering">
                     <span class="option-header">
                         <strong>Ekspress Pakke til utleveringssted</strong>
@@ -171,11 +195,11 @@
                         <em>1-3 Virkedager</em>
                     </p>
                     <p class="option-price">
-                        59 kr <br>
+                        59 kr <i class="icon fa-solid fa-box" aria-label="Pakkeikon for levering"></i><br>
                         Leveres hjem til deg for frokost mandag til lørdag innen 4-7 hverdager.
                     </p>
                 </label>
-                <label for="standard hjemlevering">
+                <label for="standard hjemlevering" class="delivery-option">
                     <input type="radio" name="levering" value="standard-hjem">
                     <span class="option-header">
                         <strong>Standard Hjemlevering</strong>
@@ -184,11 +208,11 @@
                         <em>5-8 Virkedager</em>
                     </p>
                     <p class="option-price">
-                        Gratis <i class="icon fa-solid fa-box" aria-label="Pakkeikon for levering"></i>
+                        Gratis <i class="icon fa-solid fa-truck" aria-label="Gratis leveringsikon"></i>
                     </p>
                 </label>
             </form>
-        </section>
+        </section>        
         
         
         <section id="betaling">
@@ -205,6 +229,7 @@
                 <input type="number" id="cvc" name="cvc" autocomplete="cc-csc" placeholder="CVC/CVV" required>
         
                 <div class="total-belop">
+                    <hr>
                     <p>Å betale inkl. mva.</p>
                     <h3>1,199 kr</h3>
                 </div>
@@ -214,22 +239,20 @@
                 <p class="info-text">
                     Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
                 </p>
-        
-                <div class="checkboxes">
-                    <label for="nyhetetsbrev">
-                        <input type="checkbox" name="newsletter"> Ja takk! Send nyhetsbrev til meg.
-                    </label>
-                    <label for="sms">
-                        <input type="checkbox" name="sms"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
-                    </label>
-                </div>
             </form>
+            <div class="checkboxes">
+                <label for="nyhetetsbrev">
+                    <input type="checkbox" name="newsletter"> Ja takk! Send nyhetsbrev til meg.
+                </label>
+                <label for="sms">
+                    <input type="checkbox" name="sms"> Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+                </label>
+            </div>
         </section>
         
     </main>
 
-    <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <hr>
         <section class="footer-logo">
                 <a href="#">LOGO</a>
@@ -250,9 +273,10 @@
             <section class="footer-snarveier">
                 <h3>SNARVEIER</h3>
                 <ul>
-                    <li><a href="#">Produkter</a></li>
-                    <li><a href="#">Kategorier</a></li>
+                    <li><a href="#populære-produkter">Produkter</a></li>
+                    <li><a href="#populære-kategorire">Kategorier</a></li>
                     <li><a href="#">Kontakt oss</a></li>
+                    <li><a href="tilgjengelighetserklæring/Tilgjenglighetserklæring.pdf">Tilgjenglighetserklæring</a></li>
                 </ul>
             </section>
             

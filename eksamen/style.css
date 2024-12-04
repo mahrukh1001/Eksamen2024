@@ -5,8 +5,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-   
+    overflow-x: hidden;   
+    min-width: 500px;
 }
 
 a {
@@ -23,36 +23,41 @@ header {
     background: #fff;
 }
 
-.header .search-form {
+.search-form {
+    margin-top: 25px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     width: 100%;
-    padding: 5px 10px;
+    max-width: 260px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative; 
 }
 
-.search-form input{
+.search-form input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-}
-
-.search-form button{
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: #f0f0f0;
-    border-radius: 0 5px 5px 0;
-
-}
-
-.search-form button i {
+    border: none;
+    padding: 10px 40px 10px 15px; 
     font-size: 16px;
-    color: black;
 }
 
-.search-form button:hover{
-    background-color: #e1e1e1;
+.search-form button {
+    position: absolute; 
+    right: 10px; 
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    width: 40px; 
 }
+
+
 
 
 .meny ul {
@@ -67,20 +72,29 @@ header {
 
 .meny ul li a {
     font-size: 18px;
-    padding: 10px 20px;
     color: #333;
     text-decoration: none;
     border-radius: 4px;
 }
 
 
+.meny ul li a:hover{
+    text-decoration: underline;
+    color: #333;
+}
 
 .logo{
-    font-size: 30px !important;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+    pointer-events: none;
 } 
+
+.logo-item{
+    margin-top: 10px;
+    justify-self: center;
+}
 .header-icons{
     display: flex;
     justify-content: center;
@@ -99,20 +113,17 @@ footer .footer-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    justify-content: space-between;
     text-align: left;
 }
 
 footer .footer-kontakt, footer .footer-snarveier{
-    display: flex;
-    flex-direction: column;
     margin-left: 32px;
 }
 
 footer .footer-kontakt h3, footer .footer-snarveier h3{
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 footer .footer-kontakt address, footer .footer-snarveier ul{
@@ -196,117 +207,135 @@ footer .footer-logo{
 
 
 
-.kategori-buttons{
+.kategori-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
     margin-top: 16px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.kategori-buttons .button{
+.kategori-buttons .button {
     display: inline-block;
-    padding: 12px 20px;
-    border-radius: 30px;
+    padding: 10px 30px; 
+    border-radius: 20px; 
     text-align: center;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
-    border: 1px solid #000;
-    line-height: 1.2;
-    width: 70px;
-
+    border: 1px solid #000; 
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    white-space: normal;
+    word-wrap: break-word; 
+    word-break: break-all;
+    max-width: 120px;
+    margin-top: 20px;
 }
 
+.kategori-buttons .button:hover {
+    background-color: #666; 
+    color: #fff; 
+}
 
+.kategori-buttons .button:first-child{
+    background-color: #2c2a2a;
+    color: #fff;
+}
 
-#populære-produkter{
+/* populære produkter */
+#populære-produkter {
+    display: grid;
+    justify-items: center ;
     text-align: center;
-    padding: 16px;
 }
 
 #populære-produkter h2{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-#populære-produkter p{
-    font-size: 16px;
-    margin-bottom: 16px;
-}
-
-
-
-
-.produkter article {
-    display: inline-block; 
-    text-align: center; 
-    margin: 10px; 
-    
-    
-}
-
-
-
-.produkter article .reviews{
-    text-align: left;
-    margin-top: 5px;
-}
-   
-
-
-.produkter img{
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    margin-top: 50px;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+    max-width: 300px;
+    line-height: 1.4;
     margin-bottom: 10px;
 }
+#populære-produkter .teskt{
+    margin-top: 20px;
+} 
 
-.produkter article p{
+.populære-produktkort-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.populære-produktkort-container .produktkort{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 16px;
+    background-color: #fff;
+    max-width: 300px;
+
+}
+
+.populære-produktkort-container .produktkort .produkt-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+.populære-produktkort-container .produktkort img{
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    margin-right: 110px;
+    
+}
+
+.populære-produktkort-container .produktkort h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    position: relative;
+    top: -25px;
+
+}
+
+.populære-produktkort-container .produktkort .pris{
+    font-size: 16px;
+    top: -6px;
+    margin-bottom: 60px;
+    margin-right: 8px;
+
+}
+
+
+.populære-produktkort-container .produktkort .reviews{
+    margin-top: -45px;
+    font-size: 14px;
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 5px;
 }
 
-.produkter article h3,
-.produkter article p:first-of-type{
-    display: inline-block;
-    margin: 0;
-}
-
-.produkter article .product-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.produkter article .reviews{
-    margin-top: 5px;
-}
-
-
-#populære-kategorier{
-    text-align: center;
-    padding: 20px;
-    
-}
-
-#populære-kategorier .kategorier{
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px;
-}
-
 
 #anmeldelser{
-    padding: 16px;
+    padding: 20px;
     display:flex;
     flex-direction: column;
     gap: 16px;
-    
 }
 
 .anmeldelse-kort-container{
@@ -330,7 +359,7 @@ footer .footer-logo{
     padding: 16px;
     background-color: #fff;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 289px;
     border-radius: 40px;
 
 }
@@ -375,6 +404,8 @@ article {
 
 
 
+
+
 /* BANNER */
 .banner {
     background-color: #e0e0e0;
@@ -395,11 +426,10 @@ article {
     background-color: #fff;
     color: #000;
     padding: 8px 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #666;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 8px;
-    /* https://www.w3schools.com/css/css3_borders.asp */
     border-radius: 25px;
     background-position: left top;
     background-repeat: repeat;
@@ -415,7 +445,7 @@ article {
     padding: 0;
     margin: 16px 0;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 20px;
     
 }
 
@@ -440,10 +470,1987 @@ article {
 
 
 
+
 /* Lignende produkter */
 .lignende-produkter .produkter{
     display: flex;
-    flex-direction: row;
-    gap: 16px;
+    overflow-x: auto ;
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+    padding: 16px;
+   
+}
+
+.lignende-produkter .produktkort{
+    flex: 0 0 280px; 
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #fff;
+    text-align: left;
+
+}
+
+
+.produktkort img{
+    max-width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+
+
+.produktkort h3{
+    text-align: left;
+    margin-right: 40px;
+   
+   
+    
+}
+
+.produkt-info{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.produkt-info .produkt-pris{
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-right: 65px;
+    
+}
+
+.produktkort .produkt-info h3{
+    margin-bottom: 35px;
+    flex: 1;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.produktkort .reviews{
+    margin-left: 14px;
+    margin-top: -10px;
+
+}
+
+
+/* shoppingbag */
+.kasse-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;}
+
+#shoppingbag {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+} 
+
+.shoppingbag-container{
+    border: 1px solid #ddd;
+    max-width: 410px;
+    margin: 20px auto;
+    padding: 20px;
+} 
+
+#shoppingbag h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.shoppingbag-container h3{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.shoppingbag-section p{
+    color: #6A1B91;
+    margin-left: 25px;
+}
+
+.produkt-element h4,
+.produkt-element p{
+    text-align: left;
+    padding-right: 50px;
+}
+
+
+
+/* Produktkort */
+.produkt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 600px;
+
+}
+.produkt-bilder,
+.produkt-info {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.produkt-bilder{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 20px;
+    
+}
+.stort-bilde{
+    flex: 1;
+    order: 2;
+}
+
+.stort-bilde img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.små-bilder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 160px;
+    
+}
+
+.små-bilder img{
+    max-width: 160px;
+    height: 140px;
+    object-fit: cover;
+}
+
+
+.produkt-element{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px;  
+    padding: 15px;
+    border-radius: 8px; 
+    background-color: #fff; 
+    max-width: 300px; 
+    margin: 0 auto 20px;
+}
+
+
+.produkt-element img {
+    max-width: 100%; 
+
+     
+
+}
+
+.kasse-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    text-align:left; 
+    width: 100%;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.kasse-info h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+
+} 
+
+.kasse-info p{
+    color: #000;
+}
+
+.mini-info {
+    text-align: left;
+    margin-left: -20px;
+}
+
+
+.kasse-info select,
+.kasse-info input[type="number"] {
+    padding: 13px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    width: 60px;
+    box-sizing: border-box;
+} 
+ 
+.kasse-info input[type="number"]{
+    margin-right: 30px;
+} 
+
+
+
+.kasse-info select{
+    background-color: #dedada;
+}
+
+.produkt-ikoner {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; 
+    margin-top: 35px;
+    gap: 10px;
+}
+
+.produkt-ikoner i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.produkt-ikoner i:hover {
+    color: #000;
+}
+
+
+
+.velg-størrelse{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #292929;
+    width: 100%;
+    background-color: #e8e6e6;
+    max-width: 450px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.handlekurv-seksjon{
+    display: flex;
+    gap: 10px;
+}
+
+.legg-i-handlekurv{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+
+
+
+.hjerte-knapp{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+
+}
+
+.hjerte-knapp span{
+    font-size: 18px;
+    color: #2e2e2e;
+}
+
+.handlekurv-seksjon .hjerte{
+    background-color: white;
+    border: 1.5px solid #666;
+    width: 40px;
+}
+
+
+
+
+.lignende-produkter h2{
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+
+.lignende-produkter a{
+    margin-left: 25px;
+    margin-top: 50px;
+    color: #6A1B91;
+
+
+}
+
+
+
+
+
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+form select,
+form input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    width: 60px;
+}
+
+/* Handlingsknapper */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.actions button:hover {
+    color: #000;
+}
+
+#Levering form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* Personlig opplysninger */
+
+.personopplysninger{
+    border: 1px solid #ddd;
+    max-width: 410px;
+    margin: 20px auto;
+    padding: 20px;
+  
+}
+
+
+.personopplysninger h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.personopplysninger h5 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.personopplysninger form {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px; 
+    
+}
+
+.personopplysninger form label {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.personopplysninger form input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #666;
+    border-radius: 4px;
+}
+
+.personopplysninger form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.personopplysninger form input[type="reset"] {
+    background: none;
+    color: #007bff;
+    font-size: 14px;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Levering */
+#levering {
+    border: 1px solid #ddd;
+    max-width: 410px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#levering h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left; 
+}
+
+#levering h5 {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left; 
+}
+
+#levering form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+#levering form label {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+    cursor: pointer; 
+    font-size: 14px; 
+    line-height: 1.5; 
+}
+
+#levering form label:hover {
+    background-color: #f1f1f1;
+    border-color: #666; 
+}
+
+#levering form input[type="radio"] {
+    margin-right: 10px; 
+}
+
+#levering form .option-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#levering form .option-header strong {
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+#levering form .option-header span {
+    font-size: 14px; 
+    font-weight: bold;
+    color: #555; 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#levering form .option-header span .icon {
+    font-size: 16px; 
+    color: #555;
+}
+
+#levering form .option-details {
+    font-size: 12px; 
+    color: #666; 
+    line-height: 1.5;
+}
+
+#levering form .option-details em {
+    font-style: normal;
+    font-weight: bold;
+    color: #333; 
+}
+
+#betaling {
+    border: 1px solid #ddd;
+    max-width: 410px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#betaling h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+#betaling h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#betaling form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+}
+
+#betaling form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+#betaling form input[type="text"],
+#betaling form input[type="date"],
+#betaling form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: -10px;
+}
+
+#betaling .total-belop {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#betaling .total-belop p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+#betaling .total-belop h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#betaling .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#betaling .submit-btn:hover {
+    background-color: #555;
+}
+
+#betaling .info-text {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 16px;
+    text-align: center;
+}
+
+#betaling .checkboxes {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    margin-left: 40px;
+    
+}
+
+#betaling .checkboxes label {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
+    margin-bottom: 7px;
+}
+
+#betaling .checkboxes input[type="checkbox"] {
+    accent-color: #333; 
+}
+
+#betaling .checkboxes label[for="nyhetsbrev"]{
+    margin-left: 50px;
+}
+#betaling .checkboxes label[for="sms"] {
+    margin-left: 10px; 
+}
+
+.total-belop hr{
+    border-top: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.samtykke {
+    margin-top: 24px;
+}
+
+.samtykke label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.samtykke p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.produkter .produktkort1 a h3{
+    text-align: left;
+}
+
+
+
+
+.kategori1, .kategori2, .kategori3, .kategori4, .kategori5{
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    width: 20ox;
+    height: 20px;
+    max-width: 20px;
+}
+
+#populære-kategorier{
+    text-align: center;
+    padding: 20px;
+    
+}
+
+#populære-kategorier .kategorier{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+#populære-kategorier h2{
+    margin-top: 65px;
+    white-space: normal;
+    word-wrap: break-word; 
+    text-align: center;
+    display: inline-block;
+    max-width: 300px;
+    line-height: 1.4;
+
+}
+#populære-kategorier p{
+    margin-bottom: 35px;
+}
+
+.kategorier{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.kategorier article {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    gap:16px;
+    display: flex;
+    align-items: center;
+}
+
+.kategorier article::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px) brightness(65%);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+
+.kategorier img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 40px;
+    overflow: hidden;
+    
+}
+
+.kategorier article:nth-child(1)::before{
+    background-image: url('https://cdn.pixabay.com/photo/2016/12/31/16/14/frozen-bubble-1943224_1280.jpg');
+}
+
+
+.kategorier article:nth-child(2)::before{
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/10/05/38/cans-2618674_1280.jpg');
+}
+
+
+.kategorier article:nth-child(3)::before {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/10/05/44/pizza-2618726_1280.jpg');
+}
+
+.kategorier article:nth-child(4)::before {
+    background-image: url('https://cdn.pixabay.com/photo/2017/04/10/16/55/live-music-2219036_1280.jpg');
+}
+
+.kategorier article:nth-child(5)::before {
+    background-image: url('https://cdn.pixabay.com/photo/2019/09/26/03/54/manipulation-4505018_1280.jpg');
+}
+
+
+.kategorier h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Over bakgrunnen */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+
+    
+}
+
+.kategori1, .kategori4{
+    height: 300px;
+}
+
+.kategori2, .kategori5{
+    height:350px;
+}
+
+.kategori3{
+    height: 500px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .kategorier {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-gap: 20px;
+    }
+
+    .kategori1 {
+        grid-column: span 1;
+    }
+
+    .kategori2 {
+        grid-column: span 1;
+    }
+
+    .kategori3 {
+        grid-column: span 1;
+    }
+
+    .kategori4 {
+        grid-column: span 1;
+    }
+
+    .kategori5 {
+        grid-column: 1 / 1; 
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        padding: 40px;
+    }
+
+    /* HEADER */
+    header {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 20px 5%; 
+        max-width: 1200px; 
+        margin: 30px; 
+        margin-top: 25px;
+    }
+    
+    .header .search-form {
+        display: flex;
+        flex: 1; 
+        max-width: 400px;
+        margin-right: 45px;
+        position: relative;
+    }
+    
+    .header .search-form input {
+        width: 100%; 
+    }
+    
+    .meny ul {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 30px; 
+        margin: 0;
+        white-space: nowrap;
+    }
+    
+    
+    .header-icons {
+        display: flex; 
+        gap: 15px; 
+        align-items: center; 
+        margin-left: 120px; 
+    }
+    
+
+    /* BANNER */
+    .banner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        padding: 400px;
+        max-width: 1200px;
+        background: url(img/pizza-2618726_1280.jpg) center/cover no-repeat;
+        height: 500px;
+        padding: 0 30px;
+        border-radius: 20px;
+        fill: cover;
+    }
+
+    .banner h1{
+        font-size: 3rem;
+        font-weight: bold;
+        color: black;
+        width: 60%;
+        max-width: 100%;
+        line-height: 1.2;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+    .banner button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: #333;
+        background: #fff;
+        border: none;
+        border-radius: 20px;
+    }
+     
+    footer {
+        text-align: left;
+    }
+
+    footer h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    footer .footer-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 32px; 
+        max-width: 1200px; 
+        margin-bottom: 40px;
+    }
+
+    footer .footer-kontakt,
+    footer .footer-snarveier {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .footer-snarveier {
+        align-items: center;
+        margin-left: 0; 
+    }
+
+    footer .footer-snarveier h3 {
+        text-align: left; 
+        margin-right: 0;
+    }
+
+    footer .footer-snarveier ul {
+        list-style: none; 
+        line-height: 1.7;
+        margin-bottom: 15px;
+        margin-top: 0;
+        
+
+    }
+
+    footer .footer-snarveier ul li a {
+        text-decoration: none;
+        color: #333;
+        margin-right: 28px;
+    }
+
+    footer .footer-snarveier ul li a:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    footer .footer-sosiale-medier {
+        text-align: left; 
+        padding-left: 165px;
+        margin-top: -3px;
+    
+    }
+
+    footer .footer-sosiale-medier h3 {
+        text-align: left; 
+        margin-bottom: 25px;
+    }
+
+    footer .footer-sosiale-medier a {
+        display: inline-block;
+        margin-right: 16px;
+        font-size: 20px;
+        color: #333;
+        text-decoration: none;
+        margin-top: 1px;
+    }
+
+    footer .footer-sosiale-medier a:hover {
+        color: #000;
+    }
+
+    footer .footer-logo {
+        padding: 15px;
+        margin-bottom: 16px;
+        margin-left: 20px;
+        
+    }
+
+    .footer-logo a {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 8px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+        color: #666;
+        margin-top: 8px;
+    }
+
+    footer hr {
+        border-top: 1px solid #7c7575;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #populære-produkter h2{
+        text-align: center;
+        white-space: nowrap;
+        font-size: 40px;
+        display: inline-block;
+        margin-right: 100px;
+        padding-right: 100px;
+    }
+
+    #populære-produkter .tekst{
+        font-size: 25px;
+    }
+
+    #populære-produkter{
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .populære-produktkort-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .populære-produktkort-container .produktkort {
+        max-width: 350px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        margin: 0;
+
+        
+    }
+
+    .populære-produktkort-container .produktkort .produkt-info {
+        display: grid;
+        grid-template-columns: 1fr auto; 
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 5px; 
+    }
+    
+    
+    .populære-produktkort-container .produktkort .produkt-info h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .populære-produktkort-container .produktkort .produkt-info .pris {
+        font-size: 14px;
+        text-align: right;
+        margin-top: -5px;
+        
+        
+    }
+    .populære-produktkort-container .produktkort .reviews {
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 5px;
+        margin-left: 9px;
+        
+    }
+   
+    .populære-produktkort-container .produktkort img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        max-height: 350px;
+    }
+    
+    .kategori-buttons .button{
+        padding: 15px 50px;
+        font-size: 18px;
+        max-width: 200px;
+
+    }
+
+
+    /* KATEGORIER */
+
+    #populære-kategorier h2{
+        text-align: center;
+        white-space: nowrap;
+        font-size: 40px;
+        display: inline-block;
+        margin-right: 100px;
+        padding-right: 100px;
+        margin-bottom: 10px;
+    }
+    #populære-kategorier p{
+        font-size: 25px;
+    }
+
+    .kategorier {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "cat1 cat2 cat3 cat5"
+            "cat4 cat4 cat3 cat5";
+        gap:20px;
+    }
+
+    .kategori1 {
+        grid-column: span 1;
+      
+    }
+
+    .kategori2 {
+        grid-column: span 1;
+    }
+
+    .kategori3 {
+        grid-column: span 1;
+    }
+
+    .kategori4 {
+        grid-column: span 2;
+    }
+
+    .kategori5 {
+        grid-column: span 1;
+        grid-row: 2;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+
+    .kategorier article {
+        width: 100%;
+        position: relative;
+    }
+
+    .kategorier img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    
+    
+    /* ANMELDELSER */
+    .anmeldelse-kort-container {
+        display: flex;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .anmeldelse-kort {
+        max-width: 289px;
+    }
+
+
+
+ 
+
+
+
+
+    .produktkort {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+
+    .produktkort img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .produkt-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8px; 
+    }
+
+    .produkt-info h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .produkt-info p {
+        margin: 0;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .produkt-info select,
+    .produkt-info input[type="number"] {
+        width: auto;
+        padding: 5px;
+        border: 1px solid #666;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    .produkt-ikoner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .produkt-ikoner i {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .produkt-ikoner i:hover {
+        color: #007bff;
+    }
+    .produkter {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+
+    }
+
+    .produkter article {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .produkter article .product-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        text-align: left; 
+
+    }
+
+    .produkter img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #000000;
+        display: block;
+    }
+    
+
+    .produkter article .reviews {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .produkter article p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    #populære-kategorier .kategorier {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto; 
+        gap: 20px; 
+        justify-content: center;
+    }
+
+
+    #anmeldelser h2{
+        margin-left: 10px;
+        font-size: 40px;
+    }
+    .kategorier article {
+        position: relative;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    /* kategorikort*/
+    .kategorier article:nth-child(1),
+    .kategorier article:nth-child(2) {
+        max-width: 386px; 
+        width: 100%;
+        height: 400px; 
+    }
+
+
+    .kategorier article:nth-child(3) {
+        grid-column: span 1; 
+        max-width: 386px; 
+        height: 550px; 
+    }
+
+    
+    .kategorier article:nth-child(4) {
+        grid-column: span 2; 
+        max-width: 864px; 
+        width: 100%;
+        height: 500px; 
+    }
+
+    
+    .kategorier article:nth-child(5) {
+        grid-column: span 1; 
+        max-width: 300px; 
+        width: 100%;
+        height: 350px; 
+    }
+
+    
+    .kategorier h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+        
+    .kasse-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .header .search-form {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        text-indent: 10px;
+        color: #666;
+        cursor: pointer;
+        border: 1px solid #666;
+        right: 50px;
+        margin-bottom: 35px;
+        min-width: 250px;
+        max-width: 260px;
+
+      }
+    #shoppingbag-section .back-link{
+        position: relative;
+        top: -20px;
+    }
+
+
+    .shoppingbag-container{
+        max-width: 800px;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      
+    }
+    
+
+
+    .produkt-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 100px;
+        padding-left: 90px;
+        
+        
+    } 
+    
+    .produkt-element {
+        display: flex;
+        flex-direction: row;  
+        align-items: flex-start; 
+        gap: 20px;
+        margin-left: 0;
+        
+    } 
+
+    .more-info {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+        flex: 1 ;
+        
+    }
+
+    .more-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0; 
+    }
+    .more-info h4,
+    .more-info p {
+        margin: 0;
+        font-size: 14px;
+        white-space: nowrap; 
+        
+    }
+
+    .kasse-info label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .kasse-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .størrelse-container,
+    .antall-container{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    .kasse-info .inputs-container {
+        display: flex; 
+        gap: 20px; 
+        align-items: flex-start; 
+    }
+    .produkt-element img {
+        width: 200px; 
+        height: auto;
+        object-fit: cover; 
+    }
+    
+    
+    
+
+
+    
+      /*Personopplysninger */
+    .personopplysninger{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    .personopplysninger h2{
+        text-align: left;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .personopplysninger p{
+        text-align: left;
+        font-size: 16px;
+        color: #555;
+        padding-left: 45px;
+        margin-left: 42px;
+        margin-top: 80px;
+
+    }
+
+    .personopplysninger form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 300px 300px;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .personopplysninger form label{
+        display: block;
+        margin-bottom: -2px;
+        font-size: 14px;
+        font-weight: bold;
+
+    }
+      
+    .personopplysninger form input[type="text"]{
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #666;
+        align-items: center;
+        
+
+    } 
+
+    
+    .personopplysninger form label [for="fornavn"]{
+        grid-column: 1 / 2;
+        grid-row: 1;
+        
+    }
+
+    .personopplysninger form input#fornavn {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .personopplysninger form input#adresse{
+        grid-column: 1 / 3;
+        margin-top: -10px;
+    }
+
+    .personopplysninger form label [for="postnummer"]{
+        grid-column: span 1/2;
+        grid-row: 5;
+    }
+
+    .personopplysninger form input#postnummer {
+        grid-column: 1 / 2;
+        grid-row: 6; 
+    }
+
+    .personopplysninger form label[for="poststed"] {
+        grid-column: 2 / 3;
+        grid-row: 5; 
+    }
+
+    .personopplysninger form input#poststed {
+        grid-column: 2 / 3;
+        grid-row: 6; 
+    }
+
+    .personopplysninger form h5{
+        margin-top: 100px;
+    }
+   
+    .personopplysninger form label[for="epost"] {
+        grid-column: 1 / 2;
+        grid-row: 2; 
+        margin-top: -20px;
+        font-size: 16px;
+    }   
+
+    .personopplysninger form input#epost {
+        grid-column: 1 / 3; 
+        grid-row: 3; 
+        margin-top: -10px;
+    }
+    /* Telefon */
+    .personopplysninger form label[for="telefon"] {
+        grid-column: 1 / 3; 
+        grid-row: 4; 
+        font-size: 16px;
+    }
+
+    .personopplysninger form input#telefon {
+        grid-column: 1 / 3; 
+        grid-row: 5;
+        margin-top: -10px;
+    }
+
+
+    
+    .personopplysninger form input[type="submit"],
+    .personopplysninger form input[type="reset"]{
+        margin-top: 40px;
+        grid-column: span 2;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+
+    .personopplysninger form input[type="submit"] {
+        background-color: #333;
+        color: white;
+        border: none;
+    }
+      
+    .personopplysninger form input[type="reset"] {
+        background: none;
+        color: #007bff;
+        border: none;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: -3px;
+    } 
+    
+    
+
+
+
+    #levering{
+        max-width: 800px;
+        border: 1px solid #ddd;
+    }
+
+    #betaling{
+        max-width: 800px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        padding: 20px;
+    }
+
+    #betaling h5{
+        font-size: 22px;
+        margin-bottom: -12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+    }
+
+    #betaling form{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 16px;
+    
+    }
+
+    #betaling form input{
+        width: 100%; 
+        font-size: 14px;
+        border: 1px solid #666;
+        border-radius: 4px;
+    
+    }
+   
+    
+    #betaling form label {
+        font-weight: bold;
+        line-height: 1;
+        margin-left: 5px;
+    }     
+
+    #betaling .checkboxes {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center; 
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+ 
+    
+
+    
+    /* Kortnummer */
+    #betaling form input#kortnummer {
+        grid-column: 1 / 3;
+        box-sizing: border-box;
+        
+    }
+    #betaling form label[for="kortnummer"] {
+        grid-column: 1 / 3; 
+       
+    }
+
+    
+    /* Utløpsdato */
+
+    #betaling form input#utløpsdato {
+        grid-column: 1 / 2;
+        box-sizing: border-box;
+        max-width: 400px;
+      
+    }
+    #betaling form input#cvc {
+        max-width: 400px;
+    }
+
+    #betaling form label[for="utløpsdato"] {
+        grid-column: 1 / 2;
+        grid-row: auto; 
+       
+    }
+
+    /* CVC/CVV */  
+    #betaling form label[for="cvc"] {
+        grid-column: 2;
+        grid-row:4;
+      
+      
+    }
+
+    #betaling form input#cvc {
+        grid-column: 2 / 3;
+        grid-row: auto;
+        box-sizing: border-box;
+      
+    }
+
+
+    #betaling form input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .total-belop{
+        grid-column: 1 / 3;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .total-belop p{
+        font-size: 14px;
+        color: #555;
+    }
+
+    .total-belop h3{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 8px;
+    }
+
+    .submit-btn{
+        grid-column: 1 / 3;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    .info-text{
+        grid-column: 1 / 3;
+        margin-top: 16px;
+        text-align: center;
+        max-width: 600px;
+        margin-left: 85px;
+        word-wrap: break-word;
+    }
+
+  
+    /*Produktsiden */
+    .produkt-container{
+        display: grid;
+        grid-template-columns: 700px 440px;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .produkt-bilder{
+        display: grid;
+        grid-template-columns: 1fr 580px;
+        gap: 10px;
+        max-width: 700px;
+        align-items: stretch;
+    }
+
+    .produkt-info{
+        max-width: 440px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        justify-items: start;
+        
+    }
+
+    .stort-bilde{
+        max-width: 580px;
+    }
+
+    .stort-bilde img {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+        display: block;
+    }
+
+    .små-bilder{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .små-bilder img {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover;
+   
+    }
+    .produktt-detaljer{
+        grid-row: 1;
+        text-align: left;
+    }
+    .produkt-info {
+        max-width: 440px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        max-width: 440px;
+        gap: 20px;
+        margin-bottom: 200px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .produkt-info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .produkt-info a {
+        
+        margin-bottom: 10px;
+
+    }
+    
+    .produkt-info p {
+        margin-bottom: 15px;
+        color: #000;
+    }
+    
+
+    .produkt-tillegg{
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        color: #000;
+        gap: 10px;
+        justify-items: start;
+    }
+  
+    .produkt-tillegg select {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .handlekurv-seksjon {
+        grid-row: 3; 
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .handlekurv-seksjon button.legg-i-handlekurv {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .handlekurv-seksjon button.hjerte {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    
+    /*lignende produkter */
+    .lignende-produkter .produkter {
+        display: flex;
+        overflow-x: auto; 
+        scrollbar-width: thin; 
+        scroll-snap-type: x mandatory; 
+        gap: 20px; 
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .lignende-produkter .produktkort {
+        flex: 0 0 350px; 
+        display: grid;
+        grid-template-rows: auto auto auto; 
+        border-radius: 10px;
+        padding: 16px;
+        background-color: #fff;
+        text-align: left;
+        scroll-snap-align: start;
+    }
+
+    .produktkort img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .produktkort .produkt-info {
+        display: grid;
+        grid-template-columns: 1fr auto; 
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .produktkort .produkt-info h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        text-align: left;
+    }
+
+    .produktkort .produkt-info .produkt-pris {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+        color: #333;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    .produktkort .reviews {
+        font-size: 14px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+       
+    }
+
+    .lignende-produkter .produkter::-webkit-scrollbar {
+        height: 6px; 
+    }
+
+    .lignende-produkter .produkter::-webkit-scrollbar-thumb {
+        background-color: #888; 
+        border-radius: 10px;
+    }
+
+    .lignende-produkter .produkter::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /
+    }
+
+    
+    
+    
 }
